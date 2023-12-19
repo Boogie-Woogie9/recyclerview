@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             .bufferedReader()
             .use { it.readText() }
         val gson = GsonBuilder().create()
-        notes = gson.fromJson(resultString,Array<Note>::class.java).toList()
+        notes = gson.fromJson(resultString, Array<Note>::class.java).toList()
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = MyAdapter(notes)
 
